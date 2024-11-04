@@ -1,0 +1,141 @@
+<div class="product-thumb">
+  <div class="image"><a href="{{ href }}"><img src="{{ thumb }}" alt="{{ name }}" title="{{ name }}" class="img-fluid"/></a></div>
+  <div class="content">
+    <div class="description">
+      <h4><a href="{{ href }}">{{ name }}</a></h4>
+      <p>{{ description }}</p>
+            
+
+      {% for category in data %}
+         <p>{{ category }}</p>
+      {% endfor %}
+      {% if price %}
+        <div class="price">
+          {% if not special %}
+            <span class="price-new">{{ price }} </span>
+          {% else %}
+            <span class="price-new">{{ special }}</span> <span class="price-old">{{ price }}</span>
+          {% endif %}
+          {% if tax %}
+            <span class="price-tax">{{ text_tax }} {{ tax }}</span>
+          {% endif %}
+        </div>
+      {% endif %}
+      {% if review_status and rating %}
+        <div class="rating">
+          {% for i in 1..5 %}
+            {% if rating < i %}
+              <span class="fa-stack"><i class="fa-regular fa-star fa-stack-1x"></i></span>
+            {% else %}
+              <span class="fa-stack"><i class="fa-solid fa-star fa-stack-1x"></i><i class="fa-regular fa-star fa-stack-1x"></i></span>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+    <form method="post"  data-oc-toggle="ajax" data-oc-load="{{ cart }}" data-oc-target="#header-cart">
+      <div class="button-group">
+      {% if stock_cactus == 5 %}
+        <button type="submit" formaction="{{ cart_add }}" data-bs-toggle="tooltip" title="{{ button_cart }}"><i class="fa-solid fa-shopping-cart"></i></button>
+      {% else %}
+        <button type="button" id="notify-me-button" class="btn btn-default">Ειδοποίησέ Με</button>
+
+         <!-- Modal for Email Input -->
+            <div id="notifyModal" class="modal" style="display:none;">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3>Get Notified When This Product is Back in Stock</h3>
+                    <form id="notifyForm" method="post" data-oc-toggle="ajax" data-oc-load="{{ cart }}">
+                        <label for="email">Enter your email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <input type="hidden" id="product_id1" name="product_id" value="{{ product_id }}"> <!-- Pass the product ID -->
+                        <button id=" notifyFormSubmitBtn" formaction="{{ notify }}" type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+      {% endif %}
+        <button type="submit" formaction="{{ wishlist_add }}" data-bs-toggle="tooltip" title="{{ button_wishlist }}"><i class="fa-solid fa-heart"></i></button>
+        <button type="submit" formaction="{{ compare_add }}" data-bs-toggle="tooltip" title="{{ button_compare }}"><i class="fa-solid fa-arrow-right-arrow-left"></i></button>
+      </div>
+      <input type="hidden" name="product_id" value="{{ product_id }}"/> <input type="hidden" name="quantity" value="{{ minimum }}"/>
+    </form>
+  </div>
+</div>
+
+
+
+<script>
+            // Open the modal when "Notify Me" button is clicked
+              $('#notify-me-button').on('click', function() {
+                  $('#notifyModal').show();
+              });
+
+              // Close the modal when the "x" is clicked
+              $('.close').on('click', function() {
+                  $('#notifyModal').hide();
+              });
+
+            {# $('#notifyForm').on('submit', function(e) {
+                e.preventDefault();
+                alert("hooray");
+
+                $.ajax({
+                    url: 'index.php?route=index.php?route=product/product/notify',
+                    type: 'post',
+                    data: $('#notifyForm').serialize(),
+                    dataType: 'json',
+                    contentType: 'application/x-www-form-urlencoded',
+                    cache: false,
+                    processData: false,
+                    beforeSend: function() {
+                        $('#notifyFormSubmitBtn').button('loading');
+                    },
+                    complete: function() {
+                        $('#notifyFormSubmitBtn').button('reset');
+                    },
+                    success: function(json) {
+                        console.log(json);
+
+
+                        if (json['success']) {
+                            $('#alert').prepend('<div class="alert alert-success alert-dismissible"><i class="fa-solid fa-circle-check"></i> ' + json['success'] + ' <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>');
+
+                            $('#header-cart').load('index.php?route=common/cart.info&language={{ language }}');
+                        }
+                    },
+                    error: function(xhr, ajaxOptions, thrownError) {
+                        console.log(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                    }
+                });
+}); #}
+            // Handle form submission with AJAX
+            {# document.getElementById('notifyForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Get the email and product ID values
+                const email = document.getElementById('email').value;
+                const productId = document.getElementById('product_id').value;
+
+                // Send the data to the server
+                fetch('index.php?route=product/product/notify', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email: email, product_id: productId })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    alert(data.message); // Show success message
+                    document.getElementById('notifyModal').style.display = 'none';
+                })
+                .catch(error => console.error('Error:', error));
+            }); #}
+          </script>
+
+<style>
+/* Simple styling for the modal */
+.modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); }
+.modal-content { margin: 15% auto; padding: 20px; width: 300px; background: #fff; }
+.close { float: right; cursor: pointer; font-size: 20px; }
+</style>

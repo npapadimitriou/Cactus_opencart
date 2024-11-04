@@ -1,0 +1,22 @@
+2024-10-31 10:25:32 - PHP Warning:  mysqli::real_connect(): (HY000/1045): Access denied for user 'admin'@'localhost' (using password: YES) in /var/www/html/opencart/upload/system/library/db/mysqli.php on line 75
+2024-10-31 10:25:32 - mysqli object is not fully initialized: in /var/www/html/opencart/upload/system/library/db/mysqli.php on line 78
+2024-10-31 10:25:40 - PHP Warning:  mysqli::real_connect(): (HY000/1045): Access denied for user 'admin'@'localhost' (using password: YES) in /var/www/html/opencart/upload/system/library/db/mysqli.php on line 75
+2024-10-31 10:25:40 - mysqli object is not fully initialized: in /var/www/html/opencart/upload/system/library/db/mysqli.php on line 78
+2024-10-31 10:26:06 - PHP Warning:  mysqli::real_connect(): (HY000/1045): Access denied for user 'opecart'@'localhost' (using password: YES) in /var/www/html/opencart/upload/system/library/db/mysqli.php on line 75
+2024-10-31 10:26:06 - mysqli object is not fully initialized: in /var/www/html/opencart/upload/system/library/db/mysqli.php on line 78
+2024-10-31 22:10:53 - PHP Warning:  mysqli::real_connect(): (HY000/2002): No such file or directory in /var/www/html/opencart/upload/system/library/db/mysqli.php on line 75
+2024-10-31 22:10:53 - mysqli object is not fully initialized: in /var/www/html/opencart/upload/system/library/db/mysqli.php on line 78
+2024-11-01 15:10:27 - Error: Could not load template product/thumb! in /var/www/html/opencart/upload/system/library/template/twig.php on line 121
+2024-11-01 15:13:29 - Error: Could not load template product/thumb! in /var/www/html/opencart/upload/system/library/template/twig.php on line 121
+2024-11-03 11:44:23 - Object of class Opencart\System\Library\Request could not be converted to string in /var/www/html/opencart/upload/catalog/controller/product/notify.php on line 16
+2024-11-03 18:00:10 - Unsupported operand types: string + int in /var/www/html/opencart/upload/catalog/controller/product/notify.php on line 24
+2024-11-03 22:49:09 - PHP Warning:  require_once(./upload/system/startup.php): Failed to open stream: No such file or directory in /var/www/html/opencart/upload/catalog/controller/cron/product_notification_email.php on line 4
+2024-11-03 22:49:09 - Failed opening required './upload/system/startup.php' (include_path='.:/usr/share/php') in /var/www/html/opencart/upload/catalog/controller/cron/product_notification_email.php on line 4
+2024-11-03 23:13:50 - PHP Warning:  Undefined variable $registry in /var/www/html/opencart/upload/catalog/controller/cron/product_notification_email.php on line 74
+2024-11-03 23:13:50 - Opencart\System\Engine\Controller::__construct(): Argument #1 ($registry) must be of type Opencart\System\Engine\Registry, null given, called in /var/www/html/opencart/upload/catalog/controller/cron/product_notification_email.php on line 24 in /var/www/html/opencart/upload/system/engine/controller.php on line 28
+2024-11-03 23:14:08 - PHP Warning:  Undefined variable $registry in /var/www/html/opencart/upload/catalog/controller/cron/product_notification_email.php on line 74
+2024-11-03 23:14:08 - Opencart\System\Engine\Controller::__construct(): Argument #1 ($registry) must be of type Opencart\System\Engine\Registry, null given, called in /var/www/html/opencart/upload/catalog/controller/cron/product_notification_email.php on line 74 in /var/www/html/opencart/upload/system/engine/controller.php on line 28
+2024-11-04 12:20:44 - syntax error, unexpected token "print" in /var/www/html/opencart/upload/catalog/controller/cron/product_notification_email.php on line 33
+2024-11-04 12:57:05 - Unclosed '{' on line 22 in /var/www/html/opencart/upload/catalog/controller/cron/product_notification_email.php on line 94
+2024-11-04 12:59:16 - syntax error, unexpected variable "$subject" in /var/www/html/opencart/upload/catalog/controller/cron/product_notification_email.php on line 77
+2024-11-04 13:04:39 - PHP Warning:  Array to string conversion in /var/www/html/opencart/upload/catalog/controller/cron/product_notification_email.php on line 74
