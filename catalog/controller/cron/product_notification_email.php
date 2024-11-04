@@ -37,26 +37,26 @@ class ProductNotificationEmail extends \Opencart\System\Engine\Controller {
         $this->load->model('catalog/notify');
         $email="nikos@gmail.com";
         $product_info=["gfsd"];
-        $this->sendEmailNotification($email, $product_info);
 
-        // // Fetch pending notifications
-        // $notifications = $this->model_catalog_notify->getPendingNotifications();
+        // Fetch pending notifications
+        $notifications = $this->model_catalog_notify->getPendingNotifications();
 
-        // foreach ($notifications as $notification) {
-        //     $product_id = $notification['product_id'];
-        //     $email = $notification['email'];
+        foreach ($notifications as $notification) {
+            $product_id = $notification['product_id'];
+            $email = $notification['email'];
 
-        //     // Check product stock
-        //     $product_info = $this->model_catalog_product->getProduct($product_id);
+            print_r($notification);
+            // Check product stock
+            $product_info = $this->model_catalog_product->getProduct($product_id);
 
-        //     if ($product_info && $product_info['quantity'] > 0) {
-        //         // Send email notification
-        //         $this->sendEmailNotification($email, $product_info);
+            if ($product_info && $product_info['quantity'] > 0) {
+                // Send email notification
+                $this->sendEmailNotification($email, $product_info);
 
-        //         // Mark notification as sent or remove it
-        //         // $this->model_catalog_notify->removeNotification($notification['notification_id']);
-        //     }
-        // }
+                // Mark notification as sent or remove it
+                $this->model_catalog_notify->removeNotification($notification['id']);
+            }
+        }
     }
 
     private function sendEmailNotification(string $email, array $product_info): void {

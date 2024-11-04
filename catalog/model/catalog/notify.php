@@ -32,6 +32,6 @@ class Notify extends \Opencart\System\Engine\Model {
     public function removeNotification(int $notification_id): void {
         $this->db->query("UPDATE `" . DB_PREFIX . "notification_email_requests` 
         SET `notified` = 1 
-        WHERE `notification_id` = " . (int)$notification_id);    }
+        WHERE `id` = " . (int)$notification_id);    }
 
 }
