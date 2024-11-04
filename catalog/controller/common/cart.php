@@ -67,13 +67,17 @@ class Cart extends \Opencart\System\Engine\Controller {
 				}
 			}
 
+			$stock_cactus= $product['stock_status_id'];
+
 			$data['products'][] = [
 				'thumb'        => $this->model_tool_image->resize($product['image'], $this->config->get('config_image_cart_width'), $this->config->get('config_image_cart_height')),
 				'subscription' => $subscription,
 				'price'        => $price_status ?? $product['price_text'],
 				'total'        => $price_status ?? $product['total_text'],
-				'href'         => $this->url->link('product/product', 'language=' . $this->config->get('config_language') . '&product_id=' . $product['product_id'])
-			] + $product;
+				'href'         => $this->url->link('product/product', 'language=' . $this->config->get('config_language') . '&product_id=' . $product['product_id']),
+				'stock_cactus' => $stock_cactus
+			
+				] + $product;
 		}
 
 		// Totals

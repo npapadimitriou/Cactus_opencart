@@ -24,3 +24,22 @@
 2024-11-04 13:30:12 - Opencart\Catalog\Model\Catalog\Notify::removeNotification(): Argument #1 ($notification_id) must be of type int, null given, called in /var/www/html/opencart/upload/system/engine/loader.php on line 156 in /var/www/html/opencart/upload/catalog/model/catalog/notify.php on line 32
 2024-11-04 13:42:18 - PHP Warning:  Undefined array key "notification_id" in /var/www/html/opencart/upload/catalog/controller/cron/product_notification_email.php on line 57
 2024-11-04 13:42:18 - Opencart\Catalog\Model\Catalog\Notify::removeNotification(): Argument #1 ($notification_id) must be of type int, null given, called in /var/www/html/opencart/upload/system/engine/loader.php on line 156 in /var/www/html/opencart/upload/catalog/model/catalog/notify.php on line 32
+2024-11-04 19:59:45 - Error: Could not load template product/thumb! in /var/www/html/opencart/upload/system/library/template/twig.php on line 121
+2024-11-04 20:09:43 - PHP Warning:  Undefined array key "stock_status_id" in /var/www/html/opencart/upload/catalog/controller/common/cart.php on line 70
+2024-11-04 20:14:09 - PHP Warning:  Undefined array key "stock_status_id" in /var/www/html/opencart/upload/catalog/controller/common/cart.php on line 70
+2024-11-04 20:14:50 - PHP Warning:  Undefined array key "stock_status_id" in /var/www/html/opencart/upload/catalog/controller/common/cart.php on line 70
+2024-11-04 20:16:21 - PHP Warning:  Undefined array key "stock_status_id" in /var/www/html/opencart/upload/catalog/controller/common/cart.php on line 70
+2024-11-04 20:26:32 - PHP Warning:  Undefined array key "stock_status_id" in /var/www/html/opencart/upload/catalog/controller/common/cart.php on line 70
+2024-11-04 20:28:17 - PHP Warning:  Undefined array key "stock_status_id" in /var/www/html/opencart/upload/catalog/controller/common/cart.php on line 70
+2024-11-04 20:35:26 - PHP Warning:  Undefined array key "stock_status_id" in /var/www/html/opencart/upload/catalog/controller/common/cart.php on line 70
+2024-11-04 20:44:34 - PHP Warning:  Undefined array key "stock_status_id" in /var/www/html/opencart/upload/catalog/controller/common/cart.php on line 70
+2024-11-04 20:46:54 - PHP Warning:  Undefined array key "stock_status_id" in /var/www/html/opencart/upload/catalog/controller/common/cart.php on line 70
+2024-11-04 21:03:50 - PHP Warning:  Undefined array key "stock_status_id" in /var/www/html/opencart/upload/catalog/controller/common/cart.php on line 70
+2024-11-04 21:04:11 - PHP Warning:  Undefined array key "stock_status_id" in /var/www/html/opencart/upload/catalog/controller/common/cart.php on line 70
+2024-11-04 21:05:04 - PHP Warning:  Undefined array key "stock_status_id" in /var/www/html/opencart/upload/catalog/controller/common/cart.php on line 70
+2024-11-04 21:06:29 - PHP Warning:  Undefined array key "stock_status_id" in /var/www/html/opencart/upload/catalog/controller/common/cart.php on line 70
+2024-11-04 21:07:43 - PHP Warning:  Undefined array key "stock_status_id" in /var/www/html/opencart/upload/catalog/controller/common/cart.php on line 70
+2024-11-04 21:08:35 - PHP Warning:  Undefined array key "stock_status_id" in /var/www/html/opencart/upload/catalog/controller/common/cart.php on line 70
+2024-11-04 21:08:42 - PHP Warning:  Undefined array key "stock_status_id" in /var/www/html/opencart/upload/catalog/controller/common/cart.php on line 70
+2024-11-04 21:08:49 - PHP Warning:  Undefined array key "stock_status_id" in /var/www/html/opencart/upload/catalog/controller/common/cart.php on line 70
+2024-11-04 21:15:32 - PHP Warning:  Undefined array key "stock_status_id" in /var/www/html/opencart/upload/catalog/controller/common/cart.php on line 70

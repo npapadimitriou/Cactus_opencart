@@ -35,7 +35,8 @@
     </div>
     <form method="post"  data-oc-toggle="ajax" data-oc-load="{{ cart }}" data-oc-target="#header-cart">
       <div class="button-group">
-      {% if stock_cactus == 5 %}
+      {% if stock_cactus != 5 %}
+     
         <button type="submit" formaction="{{ cart_add }}" data-bs-toggle="tooltip" title="{{ button_cart }}"><i class="fa-solid fa-shopping-cart"></i></button>
       {% else %}
         <button type="button" id="notify-me-button" class="btn btn-default">Ειδοποίησέ Με</button>
@@ -45,11 +46,11 @@
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <h3>Get Notified When This Product is Back in Stock</h3>
-                    <form id="notifyForm" method="post" data-oc-toggle="ajax" data-oc-load="{{ cart }}">
+                    <form  method="post" data-oc-toggle="ajax" data-oc-load="{{ cart }}">
                         <label for="email">Enter your email:</label>
-                        <input type="email" id="email" name="email" required>
-                        <input type="hidden" id="product_id1" name="product_id" value="{{ product_id }}"> <!-- Pass the product ID -->
-                        <button id=" notifyFormSubmitBtn" formaction="{{ notify }}" type="submit" class="btn btn-primary">Submit</button>
+                        <input type="email"  name="email" required>
+                        <input type="hidden"  name="product_id" value="{{ product_id }}"> <!-- Pass the product ID -->
+                        <button  formaction="{{ notify }}" type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
             </div>

@@ -22,7 +22,11 @@ class Cart extends \Opencart\System\Engine\Model {
 
 		$products = $this->cart->getProducts();
 
+		print("ma kai edw mpaineis?????");
+		print_r($products);
 		foreach ($products as $product) {
+			// print_r($product);
+
 			if ($product['image'] && is_file(DIR_IMAGE . html_entity_decode($product['image'], ENT_QUOTES, 'UTF-8'))) {
 				$image = $product['image'];
 			} else {
@@ -58,7 +62,7 @@ class Cart extends \Opencart\System\Engine\Model {
 			}
 
 			$subscription_data = [];
-
+			
 			if ($product['subscription']) {
 				$subscription_data = [
 					'trial_frequency_text' => $this->language->get('text_' . $product['subscription']['trial_frequency']),

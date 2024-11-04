@@ -178,13 +178,12 @@ class Cart extends \Opencart\System\Engine\Controller {
 		$this->load->model('checkout/cart');
 
 		$products = $this->model_checkout_cart->getProducts();
-
 		//'stock' => $product['stock'] ? $this->language->get('error_stock') : '',
 		//'minimum' => $product['minimum'] ? $this->language->get('error_minimum') : ''
 
 		foreach ($products as $product) {
 			$subscription = '';
-
+			
 			if ($product['subscription']) {
 				if ($product['subscription']['trial_status']) {
 					$subscription .= sprintf($this->language->get('text_subscription_trial'), $price_status ?? $product['subscription']['trial_price_text'], $product['subscription']['trial_cycle'], $product['subscription']['trial_frequency'], $product['subscription']['trial_duration']);
@@ -203,11 +202,13 @@ class Cart extends \Opencart\System\Engine\Controller {
 				'price_text'           => $product['price_text'],
 				'price'                => $product['price'],
 				'total_text'           => $product['total_text'],
-				'total'                => $product['total']
+				'total'                => $product['total'],
+				'stock_status'			=> $product['stock_status'],
 			] + $product;
 		}
 
 		return $product_data;
+		
 	}
 
 	public function getTotals(): array {

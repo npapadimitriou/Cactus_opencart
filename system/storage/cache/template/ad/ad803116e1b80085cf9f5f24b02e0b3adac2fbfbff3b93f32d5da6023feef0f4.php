@@ -151,16 +151,18 @@ class __TwigTemplate_1486bb3f71d23fd8be2ab1ba73f8ec0d95769d288963bf3b777414e9c7d
       <div class=\"button-group\">
       ";
         // line 38
-        if ((($context["stock_cactus"] ?? null) == 5)) {
+        if ((($context["stock_cactus"] ?? null) != 5)) {
             // line 39
-            yield "        <button type=\"submit\" formaction=\"";
+            yield "     
+        <button type=\"submit\" formaction=\"";
+            // line 40
             yield ($context["cart_add"] ?? null);
             yield "\" data-bs-toggle=\"tooltip\" title=\"";
             yield ($context["button_cart"] ?? null);
             yield "\"><i class=\"fa-solid fa-shopping-cart\"></i></button>
       ";
         } else {
-            // line 41
+            // line 42
             yield "        <button type=\"button\" id=\"notify-me-button\" class=\"btn btn-default\">Ειδοποίησέ Με</button>
 
          <!-- Modal for Email Input -->
@@ -168,18 +170,18 @@ class __TwigTemplate_1486bb3f71d23fd8be2ab1ba73f8ec0d95769d288963bf3b777414e9c7d
                 <div class=\"modal-content\">
                     <span class=\"close\">&times;</span>
                     <h3>Get Notified When This Product is Back in Stock</h3>
-                    <form id=\"notifyForm\" method=\"post\" data-oc-toggle=\"ajax\" data-oc-load=\"";
-            // line 48
+                    <form  method=\"post\" data-oc-toggle=\"ajax\" data-oc-load=\"";
+            // line 49
             yield ($context["cart"] ?? null);
             yield "\">
                         <label for=\"email\">Enter your email:</label>
-                        <input type=\"email\" id=\"email\" name=\"email\" required>
-                        <input type=\"hidden\" id=\"product_id1\" name=\"product_id\" value=\"";
-            // line 51
+                        <input type=\"email\"  name=\"email\" required>
+                        <input type=\"hidden\"  name=\"product_id\" value=\"";
+            // line 52
             yield ($context["product_id"] ?? null);
             yield "\"> <!-- Pass the product ID -->
-                        <button id=\" notifyFormSubmitBtn\" formaction=\"";
-            // line 52
+                        <button  formaction=\"";
+            // line 53
             yield ($context["notify"] ?? null);
             yield "\" type=\"submit\" class=\"btn btn-primary\">Submit</button>
                     </form>
@@ -187,21 +189,21 @@ class __TwigTemplate_1486bb3f71d23fd8be2ab1ba73f8ec0d95769d288963bf3b777414e9c7d
             </div>
       ";
         }
-        // line 57
+        // line 58
         yield "        <button type=\"submit\" formaction=\"";
         yield ($context["wishlist_add"] ?? null);
         yield "\" data-bs-toggle=\"tooltip\" title=\"";
         yield ($context["button_wishlist"] ?? null);
         yield "\"><i class=\"fa-solid fa-heart\"></i></button>
         <button type=\"submit\" formaction=\"";
-        // line 58
+        // line 59
         yield ($context["compare_add"] ?? null);
         yield "\" data-bs-toggle=\"tooltip\" title=\"";
         yield ($context["button_compare"] ?? null);
         yield "\"><i class=\"fa-solid fa-arrow-right-arrow-left\"></i></button>
       </div>
       <input type=\"hidden\" name=\"product_id\" value=\"";
-        // line 60
+        // line 61
         yield ($context["product_id"] ?? null);
         yield "\"/> <input type=\"hidden\" name=\"quantity\" value=\"";
         yield ($context["minimum"] ?? null);
@@ -224,10 +226,10 @@ class __TwigTemplate_1486bb3f71d23fd8be2ab1ba73f8ec0d95769d288963bf3b777414e9c7d
               });
 
             ";
-        // line 111
+        // line 112
         yield "            // Handle form submission with AJAX
             ";
-        // line 134
+        // line 135
         yield "          </script>
 
 <style>
@@ -260,7 +262,7 @@ class __TwigTemplate_1486bb3f71d23fd8be2ab1ba73f8ec0d95769d288963bf3b777414e9c7d
      */
     public function getDebugInfo()
     {
-        return array (  231 => 134,  228 => 111,  205 => 60,  198 => 58,  191 => 57,  183 => 52,  179 => 51,  173 => 48,  164 => 41,  156 => 39,  154 => 38,  149 => 36,  146 => 35,  142 => 33,  136 => 32,  132 => 30,  128 => 28,  125 => 27,  121 => 26,  118 => 25,  115 => 24,  111 => 22,  103 => 20,  100 => 19,  92 => 17,  86 => 15,  84 => 14,  81 => 13,  78 => 12,  69 => 10,  65 => 9,  59 => 6,  53 => 5,  41 => 2,  38 => 1,);
+        return array (  233 => 135,  230 => 112,  207 => 61,  200 => 59,  193 => 58,  185 => 53,  181 => 52,  175 => 49,  166 => 42,  159 => 40,  156 => 39,  154 => 38,  149 => 36,  146 => 35,  142 => 33,  136 => 32,  132 => 30,  128 => 28,  125 => 27,  121 => 26,  118 => 25,  115 => 24,  111 => 22,  103 => 20,  100 => 19,  92 => 17,  86 => 15,  84 => 14,  81 => 13,  78 => 12,  69 => 10,  65 => 9,  59 => 6,  53 => 5,  41 => 2,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -302,7 +304,8 @@ class __TwigTemplate_1486bb3f71d23fd8be2ab1ba73f8ec0d95769d288963bf3b777414e9c7d
     </div>
     <form method=\"post\"  data-oc-toggle=\"ajax\" data-oc-load=\"{{ cart }}\" data-oc-target=\"#header-cart\">
       <div class=\"button-group\">
-      {% if stock_cactus == 5 %}
+      {% if stock_cactus != 5 %}
+     
         <button type=\"submit\" formaction=\"{{ cart_add }}\" data-bs-toggle=\"tooltip\" title=\"{{ button_cart }}\"><i class=\"fa-solid fa-shopping-cart\"></i></button>
       {% else %}
         <button type=\"button\" id=\"notify-me-button\" class=\"btn btn-default\">Ειδοποίησέ Με</button>
@@ -312,11 +315,11 @@ class __TwigTemplate_1486bb3f71d23fd8be2ab1ba73f8ec0d95769d288963bf3b777414e9c7d
                 <div class=\"modal-content\">
                     <span class=\"close\">&times;</span>
                     <h3>Get Notified When This Product is Back in Stock</h3>
-                    <form id=\"notifyForm\" method=\"post\" data-oc-toggle=\"ajax\" data-oc-load=\"{{ cart }}\">
+                    <form  method=\"post\" data-oc-toggle=\"ajax\" data-oc-load=\"{{ cart }}\">
                         <label for=\"email\">Enter your email:</label>
-                        <input type=\"email\" id=\"email\" name=\"email\" required>
-                        <input type=\"hidden\" id=\"product_id1\" name=\"product_id\" value=\"{{ product_id }}\"> <!-- Pass the product ID -->
-                        <button id=\" notifyFormSubmitBtn\" formaction=\"{{ notify }}\" type=\"submit\" class=\"btn btn-primary\">Submit</button>
+                        <input type=\"email\"  name=\"email\" required>
+                        <input type=\"hidden\"  name=\"product_id\" value=\"{{ product_id }}\"> <!-- Pass the product ID -->
+                        <button  formaction=\"{{ notify }}\" type=\"submit\" class=\"btn btn-primary\">Submit</button>
                     </form>
                 </div>
             </div>
