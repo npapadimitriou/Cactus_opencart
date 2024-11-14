@@ -48,7 +48,7 @@ class ProductNotificationEmail extends \Opencart\System\Engine\Controller {
             print_r($notification);
             // Check product stock
             $product_info = $this->model_catalog_product->getProduct($product_id);
-
+            print_r($product_info);
             if ($product_info && $product_info['quantity'] > 0) {
                 // Send email notification
                 $this->sendEmailNotification($email, $product_info);

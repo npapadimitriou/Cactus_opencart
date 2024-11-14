@@ -490,7 +490,8 @@ class Product extends \Opencart\System\Engine\Controller {
 					'href'        => $this->url->link('product/product', 'language=' . $this->config->get('config_language') . '&product_id=' . $result['product_id']),
 					'stock_cactus'		  => $stock_status_id,
 				];
-
+				print("inside product controller");
+				print_r($data);
 				$data['products'][] = $this->load->controller('product/thumb', $product_data);
 			}
 

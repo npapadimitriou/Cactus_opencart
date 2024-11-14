@@ -50,7 +50,7 @@
                         <label for="email">Enter your email:</label>
                         <input type="email"  name="email" required>
                         <input type="hidden"  name="product_id" value="{{ product_id }}"> <!-- Pass the product ID -->
-                        <button  formaction="{{ notify }}" type="submit" class="btn btn-primary">Submit</button>
+                        <button  formaction="{{ notify }}" data-bs-toggle="tooltip" type="submit" class="btn btn-primary">Submit</button>
                     </form>
                 </div>
             </div>

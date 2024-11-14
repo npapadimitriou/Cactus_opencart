@@ -43,3 +43,12 @@
 2024-11-04 21:08:42 - PHP Warning:  Undefined array key "stock_status_id" in /var/www/html/opencart/upload/catalog/controller/common/cart.php on line 70
 2024-11-04 21:08:49 - PHP Warning:  Undefined array key "stock_status_id" in /var/www/html/opencart/upload/catalog/controller/common/cart.php on line 70
 2024-11-04 21:15:32 - PHP Warning:  Undefined array key "stock_status_id" in /var/www/html/opencart/upload/catalog/controller/common/cart.php on line 70
+2024-11-04 23:21:35 - PHP Warning:  Undefined array key "stock_status_id" in /var/www/html/opencart/upload/catalog/controller/common/cart.php on line 70
+2024-11-04 23:21:39 - PHP Warning:  Undefined array key "stock_status_id" in /var/www/html/opencart/upload/catalog/controller/common/cart.php on line 70
+2024-11-05 00:15:40 - PHP Warning:  Undefined array key "stock_status_id" in /var/www/html/opencart/upload/catalog/controller/common/cart.php on line 70
+2024-11-05 00:15:47 - PHP Warning:  Undefined array key "stock_status_id" in /var/www/html/opencart/upload/catalog/controller/common/cart.php on line 70
+2024-11-05 10:42:41 - PHP Warning:  unlink(/var/www/html/opencart/upload/system/storage/cache/cache.currency.c5c18028d03262f0feeb2bf646fb83f1.1730766095): No such file or directory in /var/www/html/opencart/upload/system/library/cache/file.php on line 37
+2024-11-05 10:42:42 - PHP Warning:  Undefined array key "stock_status_id" in /var/www/html/opencart/upload/catalog/controller/common/cart.php on line 70
+2024-11-05 19:26:41 - PHP Warning:  unlink(/var/www/html/opencart/upload/system/storage/cache/cache.language.4ab6fc1e6e1e7fd0d80be63206cc592f.1730806961): No such file or directory in /var/www/html/opencart/upload/system/library/cache/file.php on line 37
+2024-11-05 19:26:41 - PHP Warning:  unlink(/var/www/html/opencart/upload/system/storage/cache/cache.currency.c5c18028d03262f0feeb2bf646fb83f1.1730806961): No such file or directory in /var/www/html/opencart/upload/system/library/cache/file.php on line 37
+2024-11-05 19:26:41 - PHP Warning:  Undefined array key "stock_status_id" in /var/www/html/opencart/upload/catalog/controller/common/cart.php on line 70

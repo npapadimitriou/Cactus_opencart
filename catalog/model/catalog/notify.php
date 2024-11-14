@@ -16,7 +16,7 @@ class Notify extends \Opencart\System\Engine\Model {
 	 */
 	public function addNotification(string $email, int $product_id): void {
 		// $this->db->query("DELETE FROM `" . DB_PREFIX . "customer_wishlist` WHERE `customer_id` = '" . (int)$customer_id . "' AND `store_id` = '" . (int)$this->config->get('config_store_id') . "' AND `product_id` = '" . (int)$product_id . "'");
-        print("inside addNotification where email is $email and product id  is $product_id ");
+        // print("inside addNotification where email is $email and product id  is $product_id ");
 		$this->db->query("INSERT INTO `" . DB_PREFIX . "notification_email_requests` SET `product_id` = '" . (int)$product_id . "', `email` = '" . $email . "', `created_at` = NOW()");
 	}
 

@@ -237,7 +237,8 @@ class Search extends \Opencart\System\Engine\Controller {
 					'rating'      => $result['rating'],
 					'href'        => $this->url->link('product/product', 'language=' . $this->config->get('config_language') . '&product_id=' . $result['product_id'] . $url)
 				];
-
+				print("inside search function");
+				print_r($data);
 				$data['products'][] = $this->load->controller('product/thumb', $product_data);
 			}
 

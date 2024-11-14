@@ -25,7 +25,7 @@ class Cart extends \Opencart\System\Engine\Model {
 		print("ma kai edw mpaineis?????");
 		print_r($products);
 		foreach ($products as $product) {
-			// print_r($product);
+			print_r($product);
 
 			if ($product['image'] && is_file(DIR_IMAGE . html_entity_decode($product['image'], ENT_QUOTES, 'UTF-8'))) {
 				$image = $product['image'];

@@ -183,7 +183,7 @@ class __TwigTemplate_1486bb3f71d23fd8be2ab1ba73f8ec0d95769d288963bf3b777414e9c7d
                         <button  formaction=\"";
             // line 53
             yield ($context["notify"] ?? null);
-            yield "\" type=\"submit\" class=\"btn btn-primary\">Submit</button>
+            yield "\" data-bs-toggle=\"tooltip\" type=\"submit\" class=\"btn btn-primary\">Submit</button>
                     </form>
                 </div>
             </div>
@@ -319,7 +319,7 @@ class __TwigTemplate_1486bb3f71d23fd8be2ab1ba73f8ec0d95769d288963bf3b777414e9c7d
                         <label for=\"email\">Enter your email:</label>
                         <input type=\"email\"  name=\"email\" required>
                         <input type=\"hidden\"  name=\"product_id\" value=\"{{ product_id }}\"> <!-- Pass the product ID -->
-                        <button  formaction=\"{{ notify }}\" type=\"submit\" class=\"btn btn-primary\">Submit</button>
+                        <button  formaction=\"{{ notify }}\" data-bs-toggle=\"tooltip\" type=\"submit\" class=\"btn btn-primary\">Submit</button>
                     </form>
                 </div>
             </div>

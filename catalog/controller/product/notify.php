@@ -10,7 +10,7 @@ class Notify extends \Opencart\System\Engine\Controller {
 	 * @return void
 */
     public function index(): void {
-        print("inside notify index");
+        // print("inside notify index");
 
         $json = [];
          // Check if the required POST parameters (product_id and email) are set
